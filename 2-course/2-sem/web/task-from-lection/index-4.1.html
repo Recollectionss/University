@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <title></title>
+  <style>
+    *{
+      margin: 5px;
+    }
+    .container{
+      width:100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      border: 2px solid silver;
+    }
+    .blue{
+      background-color: aqua;
+      width:6em;
+      height:8em;
+      flex-grow: 1;
+    }
+    .yellow{
+      background-color: yellow;
+      width: 6em;
+      height: 8em;
+      flex-grow: 1;
+    }
+    .pink{
+      background-color: deeppink;
+      width:6em;
+      height: 8em;
+      flex-grow: 1;
+    }
+    .pink:nth-last-child(1){
+      flex-grow: 2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="blue"></div>
+    <div class="blue"></div>
+    <div class="blue"></div>
+
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+    <div class="yellow"></div>
+
+    <div class="pink"></div>
+    <div class="pink"></div>
+
+  </div>
+
+</body>
+</html>
