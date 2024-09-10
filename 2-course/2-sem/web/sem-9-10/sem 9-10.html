@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif', serif;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
+
+        .font-medium {
+            font-weight: 500;
+        }
+
+        .font-normal {
+            font-weight: 400;
+        }
+
+        .card {
+            border-radius: 8px;
+            padding: 16px;
+            margin: 10px;
+            width: 590px;
+            border: 2px solid orangered;
+            background-color: white;
+        }
+
+        .card h1 {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .card-price {
+            font-weight: normal;
+            color: #333;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            background-color: silver;
+        }
+
+        .book-list, .order-form {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .book-list {
+            border-right: 1px solid #ccc;
+        }
+
+        .order-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"], input[type="email"], button {
+            padding: 8px;
+            margin-top: 2px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="number"] {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            width: 50px;
+            height: 30px;
+            text-align: center;
+        }
+
+        .btn-secondary {
+            background-color: #d1d2d2;
+            border-color: #b2b6c2;
+        }
+
+        .btn-secondary:hover {
+            background-color: #c7c7c7;
+        }
+
+        .quantity-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: #f4f4f4;
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .quantity-container label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .quantity-container input[type="number"] {
+            width: 60px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        input[type="tel"] {
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #767676;
+            border-radius: 3px;
+            width: 155px;
+            font-family: monospace;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 14px;
+            font-family: 'Noto Serif', serif;
+            cursor: pointer;
+            border-radius: 4px;
+            padding: 8px;
+            margin: 4px;
+            width: 100%;
+            border: 1px solid #45a049;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .no-arrows::-webkit-outer-spin-button,
+        .no-arrows::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="book-list">
+            <h1>Книги</h1>
+            <div id="book-container"></div>
+        </div>
+
+        <div class="order-form">
+            <form id="orderForm">
+                <h1>Замовлення</h1>
+                <div>
+                    <h3 style="margin: 0;">Одержувач</h3>
+                    <div style="margin-top: 5px;">
+                        <div>
+                            <label for="name">Ім'я:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div  style="margin-top: 5px;">
+                            <label for="surname">Прізвище:</label>
+                            <input type="text" id="surname" name="surname" required>
+                        </div>
+                        <div>
+                            <label for="phone">Номер телефону:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+38 (___) ___-__-__">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div style="margin-top: 20px">
+                    
+                        <h3 style="margin: 0;">Спосіб доставки та оплата</h3>
+                            <div style="margin-top: 5px;">
+                            <div class="row">
+                                <input type="radio" id="post" name="delivery" value="0.05" checked>
+                                <label for="post"><strong class="font-medium">Поштою:</strong> +5% до вартості замовлення</label>
+                            </div>
+                            <div class="row">
+                                <input type="radio" id="courier" name="delivery" value="0.15">
+                                <label for="courier"><strong class="font-medium">Доставка кур'єром на адресу:</strong> +15% до вартості замовлення</label>
+                            </div>
+                            <div class="row">
+                                <input type="checkbox" id="gift" name="delivery" value="0.10">
+                                <label for="gift"><strong class="font-medium">У святковій упаковці:</strong> +10% до вартості замовлення</label>
+                            </div>
+                            <div style="margin-top: 10px; display: none;" class="column" id="addressInput">
+                                <label for="address">Адреса доставки:</label>
+                                <input type="text" id="address" name="address">
+                            </div>
+                            </div>
+                    
+                </div>
+
+                <div style="margin-top: 20px">
+                    <label for="promoCodeInput">Промокод:</label>
+                    <input type="text" id="promoCodeInput" />
+                    <button type="button" class="btn-secondary" id="applyPromoCode" style="margin-top: 5px" onclick="applyPromoCode()">Застосувати промокод</button>
+                </div>
+
+                <div class="price-display">
+                    <h3>
+                        <strong>Вартість замовлення: </strong>
+                        <span class="font-normal" id="priceValue">0</span>
+                        <strong class="font-normal">грн</strong>
+                    </h3>
+                <input type="submit" value="Замовити" class="button">
+                <input type="reset" value="Відновити початкові значення полів" class="button" style="background-color:#767676; border-color: #5c5c5c;">
+            </form>
+        </div>
+
+        <div id="bill">
+            <!--    place for the final bill    -->
+        </div>
+    </div>
+
+    <script>
+        //arrays of main object entities
+        document.addEventListener('DOMContentLoaded', function() {
+        const books = [
+            { title: "Ми не відкриваємось ніде не існує фактів, тільки інтерпритації", author: "Ілларіон Павлюк", price: 350 },
+            { title: "Ласкаво просимо в класс еліти", author: "Кінугаса Сего", price: 275 },
+            { title: "Тільки я візьму новий рівент", author: "Богдан Коломійчук", price: 240 },
+            { title: "Поворот ключа", author: "Рут Веа", price: 250 },
+            { title: "Вільнюський покер", author: "Річардас Ґавяліс", price: 170 },
+            { title: "Вбивство у «Східному експресі»", author: "Аґата Крісті", price: 302 },
+            { title: "Привиди у Венеції", author: "Аґата Крісті", price: 302 },
+            { title: "Острів проклятих", author: "Денніс Лігейн", price: 350 },
+            { title: "Глиняний міст", author: "Маркус Зузак", price: 250 },
+            { title: "Смерть на Нілі", author: "Аґата Крісті", price: 250 }
+        ];
+        
+        const promocodes = [
+            { name: "booklover", percent: 0.05, isUsed: false},
+            { name: "readmore", percent: 0.10, isUsed: false},
+            { name: "bestseller", percent: 0.15, isUsed: false},
+            { name: "literature", percent: 0.20, isUsed: false}
+        ]
+
+        //all selectors from the html body
+        const bookContainer = document.getElementById('book-container');
+        const priceValue = document.getElementById('priceValue');
+        let totalPrice = 0;
+        const deliveryOptions = document.querySelectorAll('input[name="delivery"]');
+        const addressInput = document.getElementById('addressInput');
+        const checkbox = document.getElementById("gift"); 
+
+        //generating all the card visuals dynamically based on the array of books objects
+        books.forEach((book, index) => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <div style="margin-left: 10px; margin-right: 10px">
+                    <div class="flex-container">
+                        <h1>${book.title}</h1>
+                        <h1 class="card-price">${book.price} грн</h1>                        
+                    </div>
+                    
+                    <div class="flex-container">
+                        <p>${book.author}</p>
+                        <div>
+                            <input type="number" id="qty-${index}" name="quantity-${index}" value="0" min="0" max="10">
+                        </div>
+                    </div>
+
+                    <div class="flex-container">
+                        <p>Вартість: </p>
+                        <div>
+                            <input class="no-arrows" type="number" id="sgl-book-total-${index}" name="single-book-total-${index}" min="0">
+                        </div>
+                    </div>
+                </div>
+            `;
+            bookContainer.appendChild(card);
+            document.getElementById(`qty-${index}`).addEventListener('change', updatePrice);
+        });
+
+        //calculating the additional payment for the selected delivery options in the form
+        function deliveryAddition(totalPrice, selectedOption) {
+            const selectedDeliveryPercentage = parseFloat(selectedOption.value);
+            
+            //the address field display toggle
+            if (selectedOption.id === 'courier') {
+                addressInput.style.display = 'block';
+            } else {
+                addressInput.style.display = 'none';
+            }
+
+            return totalPrice * (1 + selectedDeliveryPercentage);
+        }
+
+        //calculating the additional payment whether the checkbox in form is active or not
+        function giftAddition(totalPrice, checkedBox){
+            if (checkedBox.checked) {
+                const selectedGiftPercentage = parseFloat(checkedBox.value);
+                return totalPrice * (1 + selectedGiftPercentage);
+            } else {
+                return totalPrice;
+            }
+        }
+
+        function applyPromoCode() {
+            //foemat user input & find the code according to rules
+            const promoCodeInput = document.getElementById('promoCodeInput').value.trim(); 
+            const appliedPromoCode = promocodes.find(code => code.name === promoCodeInput && !code.isUsed); 
+                
+            if (appliedPromoCode) {
+                    
+                //apply if not used and deactivate
+                totalPrice -= totalPrice * appliedPromoCode.percent;
+                appliedPromoCode.isUsed = true; 
+
+                //update the price display
+                priceValue.textContent = totalPrice.toFixed(2);
+                alert('Promo code applied successfully!');
+            } 
+            else {
+                alert('Invalid or already used promo code!');
+            }
+        }
+
+        //general calculation of the total price based on the selected books, quantity and additional options
+        function updatePrice() {
+            totalPrice = 0;
+            
+            //calculating base value doe to the books selected
+            books.forEach((book, index) => {
+                const qtyValue = document.getElementById(`qty-${index}`).value;
+                const qty = parseInt(qtyValue, 10);
+                let singleTotal = document.getElementById(`sgl-book-total-${index}`);
+
+                if (!isNaN(qty)) {
+                    singleTotal.value = book.price * qty;
+                    totalPrice += book.price * qty;
+                }
+            });
+
+            //radio duttons event listener + summon corresponding function
+            const checkedDeliveryOption = Array.from(deliveryOptions).find(radio => radio.checked);
+            if (checkedDeliveryOption) {
+                totalPrice = deliveryAddition(totalPrice, checkedDeliveryOption);
+            } else {
+                return;
+            }
+            
+            //gift package check with corresponding function
+            totalPrice = giftAddition(totalPrice, checkbox);
+
+            //all activated promocodes activation
+            promocodes.forEach(promo => {
+                if (promo.isUsed) {
+                    console.log("found: " + promo.name);
+                    totalPrice *= (1 - promo.percent);
+                }
+            });
+            
+            priceValue.textContent = totalPrice.toFixed(2);
+        }
+
+        //event listener of the radiobuttons
+        deliveryOptions.forEach(option => {
+            option.addEventListener('change', updatePrice);
+        });
+
+        //event listener of the checkboxes
+        checkbox.addEventListener('change', updatePrice);
+
+        //event listener of promocode button
+        document.getElementById('applyPromoCode').addEventListener('click', applyPromoCode);
+
+        //initial call
+        updatePrice();
+
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                surname: document.getElementById('surname').value,
+                phone: document.getElementById('phone').value,
+                deliveryType: document.querySelector('input[name="delivery"]:checked').nextElementSibling.textContent,
+                address: document.getElementById('address').value,
+                promoCode: document.getElementById('promoCodeInput').value,
+                totalPrice: parseFloat(priceValue.textContent)
+            };
+
+            //telephone format check
+            if (!/^\+38 \(\d{3}\) \d{3}-\d{2}-\d{2}$/.test(formData.phone)) {
+                alert("Inncorrect phone format, insert as +38 (___) ___-__-__");
+                return;
+            }
+
+            //selecting the container for the table
+            const billContainer = document.getElementById('bill');
+            //building the table using collected data
+            let billTable = `
+                <h2>Success</h2>
+                <table border="1" style="width:100%; border-collapse: collapse;">
+                    <tr>
+                        <th>Book name</th>
+                        <th>Quantity</th>
+                        <th>Single price</th>
+                        <th>Total price</th>
+                    </tr>`;
+            //rows
+            books.forEach((book, index) => {
+                const qty = parseInt(document.getElementById(`qty-${index}`).value, 10);
+                if (qty > 0) {
+                    billTable += `
+                    <tr>
+                        <td>${book.title}</td>
+                        <td>${qty}</td>
+                        <td>${book.price} грн</td>
+                        <td>${(book.price * qty).toFixed(2)} грн</td>
+                    </tr>`;
+                }
+            });
+
+            //setting all together
+            billTable += `
+                    <tr>
+                        <td colspan="3" style="text-align:right;"><strong>TOTAL:</strong></td>
+                        <td>${formData.totalPrice.toFixed(2)} грн</td>
+                    </tr>
+                </table>
+                <p><strong>Name:</strong> ${formData.name}</p>
+                <p><strong>Surname:</strong> ${formData.surname}</p>
+                <p><strong>Phone:</strong> ${formData.phone}</p>
+                <p><strong>Delivery:</strong> ${formData.deliveryType}</p>
+                ${formData.address ? `<p><strong>Address:</strong> ${formData.address}</p>` : ''}
+                ${formData.promoCode ? `<p><strong>Promocode:</strong> ${formData.promoCode}</p>` : ''}
+            `;
+
+            billContainer.innerHTML = billTable;
+        });
+    });
+
+    document.getElementById('phone').addEventListener('input', function (e) {
+        const x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+        e.target.value = !x[2] ? '+38' : '+38 (' + x[2] + (x[3] ? ') ' + x[3] : '') + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
+    });
+
+    </script>
+</body>
+</html>

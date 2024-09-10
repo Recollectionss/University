@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 10px;
+        }
+        body{
+            height: 50vh;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container-for-text{
+            display: flex;
+            flex-direction: column;
+            background-color: cornflowerblue;
+        }
+        button{
+            height: 40px;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="texts" class="container-for-text">
+            <input type="text">
+        </div>
+        <button id="button-add">Add</button>
+        <button id="button-remove">Remove</button>
+    </div>
+
+    <script>
+        const button_add = document.getElementById('button-add');
+        const button_remove = document.getElementById('button-remove');
+
+        const parent = document.getElementById('texts');
+
+        let all_new_input = [];
+
+        button_add.addEventListener('click',() => {
+            const new_Input = document.createElement('input');
+            new_Input.setAttribute('type','text');
+            parent.appendChild(new_Input);
+            all_new_input.push(new_Input);
+        });
+        button_remove.addEventListener('click', () => {
+            all_new_input.forEach((input)=>{
+                parent.removeChild(input);
+            });
+            all_new_input = [];
+        });
+    </script>
+</body>
+</html>

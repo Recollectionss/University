@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+    font-family: sans-serif;
+}
+section{
+    text-align: center;
+    margin: 20px;
+    border-bottom: 3px solid silver;
+}
+.color-blue{
+    background-color: blue;
+}
+.color-green{
+    background-color: green;
+}
+.color-orange{
+    background-color: orange;
+}
+.color-purple{
+    background-color: purple;
+}
+.color-cadetblue{
+    background-color: cadetblue;
+}
+.color-yellow{
+    background-color: yellow;
+}
+.color-cornflowerblue{
+    background-color: cornflowerblue;
+}
+.color-black{
+    background-color: black;
+}
+.color-silver{
+    background-color: silver;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.flex-row-revers{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+.flex-column-revers{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+}
+.flex-row div, .flex-column div{
+    flex-grow: 1;
+}
+.color-purple , .color-orange,
+.color-green, .color-blue, .color-cadetblue,
+.color-cornflowerblue, .color-silver, .color-yellow,
+.color-black{
+    border-radius: 10px;
+    width: auto;
+}
+/*TASK*/
+.container{
+    gap: 10px;
+    width: 600px;
+    height: 400px;
+    margin: 10px auto;
+}
+/*TASK-2*/
+@media (992px>width>768px) {
+    .container .flex-row{
+        flex-direction: column-reverse;
+    }
+    .container .flex-column{
+        flex-direction: row-reverse;
+    }
+}
+@media (max-width: 768px) {
+    .container .flex-row {
+        flex-direction: column-reverse;
+    }
+    .container .color-black,
+    .container .color-cornflowerblue,
+    .container .color-cadetblue {
+        flex-basis: 13.33%; /* Делаем начальный размер элементов одинаковым */
+    }
+    .container .color-black, .container .color-cornflowerblue{
+        flex-basis: 0.1rem;
+    }
+    .container .color-yellow{
+        flex-basis: 100%;
+    }
+    .container .color-silver{
+        flex-basis: 100%;
+    }
+    .container .color-cadetblue{
+        flex-basis: 30%;
+    }
+    .container .flex-column:nth-of-type(1){
+        flex-grow:16;
+    }
+}
+#task-1{
+    display: none;
+}
+

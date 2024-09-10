@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+body{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+}
+nav{
+    padding: 5em 1em;
+    width: 100%;
+    height: 20vh;
+    box-shadow: inset 0 -10px 25px orangered;
+}
+.width{
+    margin: 0 auto;
+    height: 100%;
+    width: 980px;
+    display: flex;
+    align-items: center;
+}
+.logo-with-text{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    color: orangered;
+    font-size: 2em;
+}
+.texts{
+    color: red;
+}
+.logo-with-text p, .logo-with-text h1{
+    margin: 5px;
+}
+.contacts{
+    width: 58%;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    text-align: right;
+    font-size: 1.3rem;
+}
+.contacts a{
+    font-size: 1.2em;
+    text-decoration: underline;
+    color: orange;
+    transition: color 1s, font-size 1s;
+}
+.contacts a:hover{
+    color: orangered;
+    font-size: 1.3em;
+}
+#menu{
+    z-index: 2;
+    height: 10vh;
+    background-color: orangered;
+}
+.menu-items{
+    margin: 0 auto;
+    max-width: 980px;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-items a{
+    margin: 1em;
+    font-size: 2rem;
+    text-decoration: none;
+    color:white;
+}
+.menu-items a:first-of-type{
+    padding-left: 4em;
+}
+.menu-items a:last-of-type{
+    padding-right: 4em;
+}
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    height: 70%;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+.mySlides img{
+    width: 72em;
+    height: 20em;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+#main-content{
+    z-index: 3;
+    margin: 2em auto;
+    max-width: 980px;
+    height: 60vh;
+}
+
+#catalog-section{
+    z-index: 4;
+    margin: 2em auto;
+    max-width: 980px;
+    height: 120vh;
+    /*padding: 0 15em;*/
+}
+.path{
+    display: flex;
+    font-size: 1.3em;
+}
+.path a{
+    margin: 0 1em;
+    color: orangered;
+    text-decoration: underline;
+}
+.path a:last-of-type{
+    margin: 0 1em;
+    text-decoration: none;
+}
+.content{
+    margin-top: 0.2em;
+    width: 100%;
+    height: 97%;
+    display: flex;
+    border-radius: 2em;
+    box-shadow: 5px 0 10px orangered, -5px 0 10px orange;
+}
+.content-left{
+    width: 20%;
+    height: 100%;
+}
+.content-left h2{
+    border-radius: 1em;
+    width: 30%;
+    margin-top: 1em;
+    padding-left: 0.4em;
+    padding-bottom: 0.2em;
+    text-decoration: underline;
+}
+.content-left ul{
+    padding-left: 2em;
+}
+
+
+.content-right{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 1em;
+}
+.content-right {
+    display: flex;
+    flex-wrap: wrap; /* Разрешаем элементам переноситься на следующую строку */
+}
+
+.item-info {
+    width: 15em;
+    height: 15em;
+    margin: 1em;
+    border: 1px solid silver;
+    background-color: rgba(255, 69, 0, 0.56);
+    position: relative; /* Добавлено */
+}
+
+.item-info img {
+    width: 100%;
+    height: 8em;
+}
+
+.info {
+    width: 100%; /* Добавлено */
+}
+
+.buy-info {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5em;
+    position: absolute; /* Добавлено */
+    bottom: 0;
+}
+
+#contacts{
+    z-index: 5;
+    margin: 2em auto;
+    max-width: 980px;
+    height: 100vh;
+
+}
+.container{
+    font-size: 1.5em;
+    margin: 2em auto 0 auto;
+
+    height: 100%;
+    border-radius: 2em;
+    border: 2px solid orangered;
+    box-shadow: 10px 0 10px orange, -10px 0 10px orangered;
+}
+.flex-contact{
+    margin: 8em 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.contacts-main-text{
+    font-size: 2em;
+    padding-right: 2em;
+}
+.contacts-main-text h1{
+    margin-bottom: 0.5em;
+}
+.contacts-main-text p {
+    color: silver;
+}
+.ul-contacts ul{
+    list-style-type: none;
+}
+.ul-contacts li{
+    margin: 0.4em 0;
+    transition: font-size 1s, color 1s;
+}
+.ul-contacts li:hover{
+    cursor: pointer;
+    font-size: 1.8em;
+    color: orangered;
+}
+
+.button-for-feedback{
+    display: flex;
+    justify-content: center;
+}
+.button-for-feedback button{
+    border-radius: 1.8em;
+    font-size: 2em;
+    width: 9em;
+    height: 3.5em;
+    background-color: orange;
+    color: black;
+    transition: color 1s,background-color 1s;
+    box-shadow: 10px 10px 18px silver;
+    border: 1px solid orangered;
+}
+.button-for-feedback button:hover{
+    background-color: orangered;
+    color: white;
+}
+.basic-text-about-guitar{
+    font-size: 1.2em;
+    border-top: 0.5em solid silver;
+    border-radius: 0.4em;
+}
+.basic-text-about-guitar-content{
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 800px;
+    margin: 0 auto;
+}
+.basic-text-about-guitar-text{
+    margin-bottom: 4em;
+}
+.basic-text-about-guitar-text:first-of-type{
+    margin-right: 2em;
+}
+.basic-text-about-guitar-text:last-of-type{
+    margin-left: 2em;
+}
+footer{
+    background-color: rgba(255, 69, 0, 0.66);
+    width: 100%;
+    height: 23vh;
+}
+.width:last-of-type{
+    margin: 0 auto;
+    width: 980px;
+    height: 100%;
+    /*border: 2px solid black;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
+.element li a{
+    text-decoration: none;
+    color:black;
+    transition: font-size 0.5s, color 1s;
+}
+.element li a:hover{
+    font-size: 1.1em;
+    color: white;
+}
+.element:last-of-type{
+    display: flex;
+    align-items: center;
+}
+.element:last-of-type i {
+    font-size: 2em;
+    padding-right: 0.5em;
+}
+.element:last-of-type p {
+    font-size: 1.2em;
+}
+
+.hide {
+    display: none !important;
+}
+#feedback-content{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.54);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.feedback-content{
+    font-size: 1.6em;
+    margin: 15% auto;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    display: grid;
+    justify-content: center;
+    padding: 3em;
+    border: 2px solid orangered;
+    border-radius: 2em;
+    box-shadow: 10px 0 10px orange, -10px 0 10px orangered;
+    text-align: center;
+}
+.input-feedback{
+    border: 1px solid silver;
+    height: 2.4em;
+    border-radius: 0.3em;
+    width: 20em;
+    max-width: 20em;
+    max-height: 6em;
+}
+.btn-feedback{
+    margin-top: 0.5em;
+    font-size: 1em;
+    color: black;
+    background-color: orange;
+    width: 6em;
+    height: 1.3em;
+    border-radius: 2em;
+    transition: color 1s, background-color 1s;
+}
+.btn-feedback:hover{
+    cursor: pointer;
+    background-color: orangered;
+    color: white;
+
+}

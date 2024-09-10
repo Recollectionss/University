@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 0.98em;
+        }
+        #main {
+            height: 170vh;
+            width: 800px;
+            background: linear-gradient(to right,
+            antiquewhite 0% 36%,
+            cadetblue 0% 74%,
+            cadetblue 74%
+            );
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .black-divider {
+            width: 100%;
+            height: 5%;
+            background-color: black;
+            position: relative;
+            z-index: 200;
+        }
+
+        .content {
+            position: relative;
+            width: 100%;
+            height: 95%;
+        }
+
+        .element {
+            background-color: gray;
+            opacity: 0.75;
+            height: 20%;
+            width: 120%; /* Изменено значение ширины */
+            position: relative;
+            z-index: 1;
+        }
+
+        .element:nth-of-type(1) {
+            top: -50px;
+            left: -20px;
+            transform: rotate(8deg);
+        }
+
+        .element:nth-of-type(2) {
+            bottom: -840px;
+            left: -10px;
+            transform: rotate(-8deg);
+        }
+
+        .flex{
+            position: relative;
+            top: -500px;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .left-content {
+            width: 36%;
+        }
+
+        .right-content {
+            width: 64%;
+            overflow: hidden;
+            padding: 10px;
+        }
+        .right-content img{
+            width: 490px;
+            margin: 10px 0;
+        }
+        .content-text{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        .text{
+            margin: 5px;
+        }
+        .text:last-of-type ul{
+            margin-left: 14px;
+        }
+
+        .grid-img{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+        }
+        .grid-img img{
+            width: 200px;
+            margin: 20px 20px 20px 87px;
+        }
+        .grid-img img:first-of-type{
+            margin: 20px 20px 20px 50px;
+        }
+    </style>
+</head>
+<body>
+    <section id="main">
+        <div class="black-divider"></div>
+
+        <div class="content">
+            <div class="element"></div>
+            <div class="element"></div>
+            <div class="flex">
+                <div class="left-content">
+                    <div class="grid-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzihNn-__D1U6YyDErsDA57wb_YfkHDN0Wn1TG8h7qXgyI2Tg3I4Co6otlOLo2ou4bJy0&usqp=CAU" alt="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8b6LimWQdAi6a_lE-UxC9NbcCBvFofpA_qA-KRL3PlAICzcVXyhOheas4J-jcV-SmZ9g&usqp=CAU" alt="">
+                        <img src="https://rozetked.me/images/uploads/j5Bty3Lof1pq.jpg" alt="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWy-pru8hdbTRSrAi4BS0qw48nUMGVVjrXin52fpUg4xdD8pCOCulltn41_8rteK2hO30&usqp=CAU" alt="">
+                        <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2019/08/Matrix-Exam-meme.png" alt="">
+                    </div>
+                </div>
+                <div class="right-content">
+
+                    <p>"Матриця" - це футуристичний фільм, який вперше з'явився на екрани у 1999 році.
+                        Він прославився своїми культовими сценами, філософськими концепціями та унікальним
+                        візуальним стилем. У центрі сюжету - історія звичайного програміста на ім'я Нео, який
+                        виявляє, що його світ - лише віртуальна реальність, створена машинами, а він сам - ключ
+                        до порятунку людства від їхнього рабства. "Матриця" стала не просто фільмом, а справжнім
+                        культурним явищем, що продовжує впливати на кіноіндустрію та суспільство навіть через багато
+                        років після свого випуску.</p>
+
+                    <img src="https://habrastorage.org/r/w780/webt/bf/pl/0k/bfpl0keppa0r2ebxpcg6vzyhwg0.jpeg" alt="">
+                    
+                    <div class="content-text">
+                        <div class="text">
+                            <h3>Цікавий Сюжет</h3>
+                            <p>Фільм "Матриця" має захоплюючий сюжет, який залишає
+                                глядача на межі реальності та віртуальності. Він розповідає
+                                історію боротьби людства за свободу в світі, де реальність виявляється лише ілюзією.</p>
+                        </div>
+                        <div class="text">
+                            <h3>Унікальна Візуальна Стилістика</h3>
+                            <p>Один з найбільш запам'ятовуючих аспектів фільму -
+                                це його унікальна візуальна стилістика. Картиноназвання
+                                та ефекти перенесуть вас у світ, якого ви ніколи не бачили.</p>
+                        </div>
+                        <div class="text">
+                            <h3> Філософські Випробування</h3>
+                            <p>"Матриця" також відома своїми філософськими концепціями,
+                                які залишають глядача задуманим. Фільм досліджує теми існування,
+                                вільної волі та реальності, спонукаючи глядача до глибоких роздумів.</p>
+                        </div>
+                        <div class="text">
+                            <h3>Запам'ятовуючі Герої</h3>
+                            <p>У "Матриці" є культові сцени, які стали класикою кіно. Серед них - бої
+                                в кулі, тренування виртуальної реальності та інші епічні моменти, які залишають враження на довгі роки.</p>
+                        </div>
+                        <div class="text">
+                                <h3>Таємниці Матриці:</h3>
+                            <ul>
+                                <li>Код: Матриця складається зі складної системи кодування, що контролює життя
+                                    персонажів.
+                                </li>
+                                <li>Перевтілення: Нео перетворюється зі звичайного програміста в свого істинного героя
+                                    під назвою "Обранець".
+                                </li>
+                                <li>Агенти: Агенти, такі як Агент Сміт, є програмами, що намагаються підконтролювати та
+                                    використовувати людей у Матриці.
+                                </li>
+                                <li>Ілюзія: Матриця створює ілюзію реальності для життя людей, що живуть у ній.</li>
+                                <li>Переживання: Через Матрицю люди можуть відчувати різні емоції та досвіджувати своє
+                                    життя, як вони хочуть.
+                                </li>
+                                <li>Зіон: Зіон - останнє оплот людей поза Матрицею, де вони живуть у реальному світі.
+                                </li>
+                                <li>Відкриття: Виявлення правди про Матрицю веде до великих відкриттів та переосмислення
+                                    світу.
+                                </li>
+                                <li>Воля: Основною темою фільму є боротьба за свободу та волю людини проти контролю Матриці.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+</body>
+</html>

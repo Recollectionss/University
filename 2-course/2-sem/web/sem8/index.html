@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #select-country{
+            width: 100%;
+            height: 40%;
+            display: grid;
+            justify-content: center;
+            font-size: 1.2em;
+        }
+        #select-country h1, h2{
+            text-align: center;
+        }
+        section{
+            margin: 0 auto;
+            width: 80%;
+            height: 100vh;
+        }
+        .hide{
+            display: none;
+        }
+        .country-attribute-and-info{
+            display: grid;
+        }
+        .country-attribute-and-info img{
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+        }
+        .img-about-info-country{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-about-info-country h1{
+            margin-right: 1em;
+            text-align: center;
+            font-size: 6em;
+        }
+        .info-about-country h2{
+            font-size: 2.5em;
+            color: green;
+        }
+        .elements{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .element-in-country{
+            border: 2px solid silver;
+            width: 55em;
+            height: 20em;
+            margin: 20px auto;
+            position: relative;
+        }
+        .flex-content{
+            display: flex;
+        }
+        .flex-content img{
+            margin-right: 5px;
+            width: 80em;
+            height: 18em;
+        }
+        .buy-info{
+            font-size: 1.5em;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            color:green;
+        }
+        .buy-info button{
+            font-size: 1em;
+            border-radius: 1em;
+            background-color: rgba(34, 139, 34, 0.58);
+        }
+        #value{
+            font-size: 1.7em;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 14em;
+            height: 3em;
+            border: 2px solid lawngreen;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+<nav id="select-country">
+    <h1>Подорожі!</h1>
+    <h2>Яка країна вас цікавить?</h2>
+    <div class="country">
+        <input type="radio" id="option1" name="country" value="Україна">
+        <label for="option1">Україна</label><br>
+        <input type="radio" id="option2" name="country" value="США">
+        <label for="option2">США</label><br>
+        <input type="radio" id="option3" name="country" value="Великобританія">
+        <label for="option3">Великобританія</label><br>
+        <input type="radio" id="option4" name="country" value="Японія">
+        <label for="option4">Японія</label><br>
+        <input type="radio" id="option5" name="country" value="Канада">
+        <label for="option5">Канада</label><br>
+    </div>
+
+</nav>
+<section id="ukraine" class="hide" >
+    <div class="country-attribute-and-info">
+        <div class="img-about-info-country">
+            <h1>Україна</h1>
+            <img src="https://gmk.center/wp-content/uploads/2023/12/shutterstock_2108082854-e1703839668900.jpg" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Lesser_Coat_of_Arms_of_Ukraine_%28bw%29.svg/1469px-Lesser_Coat_of_Arms_of_Ukraine_%28bw%29.svg.png" alt="">
+        </div>
+        <div class="info-about-country">
+            <h3>
+                Україна — держава, розташована у Східній та частково у Центральній Європі, охоплює південний захід
+                Східноєвропейської рівнини, частину Східних Карпат і Кримські гори. Межує з Румунією і Молдовою на південному заході,
+                з Угорщиною, Словаччиною та Польщею на заході, з Білоруссю на півночі та з Росією на сході й північному сході. На півдні
+                омивається Чорним та Азовським морями. Площа становить 603 700 км². Найбільша за площею країна серед повністю розташованих у Європі.
+            </h3>
+            <h2>200$</h2>
+        </div>
+    </div>
+    <div class="elements">
+        <div class="element-in-country">
+            <div class="flex-content">
+                <img src="https://cdn.tripzaza.com/ru/destinations/wp-content/uploads/2017/03/Ukrain-1-Kiev-Pechersk-Lavra-e1490934404725.jpg" alt="">
+                <p>
+                    Однією з найголовніших святинь православ'я, яка збереглася практично в первозданному вигляді ще з 11 століття, по праву вважається
+                    Києво-Печерська лавра - перший монастир на Русі і символ віри. Над потужними водами Дніпра, на його мальовничих схилах, сяючи золотими
+                    куполами, красуються величні храми. До них ведуть потопаючі в зелені вимощені бруківкою доріжки, а внизу, в підземеллі, звиваючись вузьким
+                    лабіринтом коридорів, розташовані таємничі печери, де знаходиться головний скарб лаври - святі нетлінні мощі праведників.
+                </p>
+            </div>
+            <div class="buy-info">
+                <label>111$ <button id="ukraine-1">Додати до суми</button></label>
+            </div>
+        </div>
+        <div class="element-in-country">
+            <div class="flex-content">
+                <img src="https://cdn.tripzaza.com/ru/destinations/wp-content/uploads/2017/03/Ukrain-2-Maidan-Nezalezhnosti--e1490934628398.jpg" alt="">
+                <p>
+                    Майдан Незалежності, який українці називають "майдан", є головною площею столиці. Це об'єкт, який туристи та гості міста обов'язково
+                    відвідують. Тут люблять гуляти біля фонтанів, фотографуватися біля величного монументу та просто гуляти. До Майдану примикають кілька
+                    головних вулиць Києва: Хрещатик, Інститутська, Софійська, Михайлівська.
+                </p>
+            </div>
+            <div class="buy-info">
+                <label>112$ <button id="ukraine-2">Додати до суми</button></label>
+            </div>
+        </div>
+        <div class="element-in-country">
+            <div class="flex-content">
+                <img src="https://cdn.tripzaza.com/ru/destinations/wp-content/uploads/2017/03/Ukrain-3-Deribasovskaya-Street-e1490934994402.jpg" alt="">
+                <p>
+                    Одеса - південна перлина, гостинне місто з душею. Місто, просочене солоними бризками Чорного моря та тонким одеським гумором, вражає
+                    своєю привітністю та нескінченною чарівністю. Туристичні компанії пропонують будь-які тури по країні, але відвідати південну Пальміру
+                    варто обов'язково.
+                </p>
+            </div>
+            <div class="buy-info">
+                <label>113$ <button id="ukraine-3">Додати до суми</button></label>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="usa" class="hide" >
+    <div class="country-attribute-and-info">
+        <div class="img-about-info-country">
+            <h1>США</h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_the_U.S..svg/1200px-Flag_of_the_U.S..svg.png" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Greater_coat_of_arms_of_the_United_States.svg/200px-Greater_coat_of_arms_of_the_United_States.svg.png" alt="">
+        </div>
+        <div class="info-about-country">
+            <h3>
+                Сполу́чені Шта́ти Аме́рики (скор. США, Сполу́чені Шта́ти, Шта́ти, Аме́рика; англ.
+                the United States of America, USA, U.S., the USA, the States, America) — федеративна республіка
+                в Північній Америці, що складається з 50 штатів: Аляски, Гаваїв, 48 штатів на території між Атлантичним
+                і Тихим океанами і між Канадою і Мексикою та федерального (столичного) округу Колумбія. Окрім того, США належать
+                частина Віргінських островів (Американські Віргінські Острови) та Пуерто-Рико у Вест-Індії, Східне Самоа, Гуам,
+                Північні Маріанські Острови та інші острови в Океанії. Столиця — місто Вашингтон. Найбільше місто — Нью-Йорк
+            </h3>
+            <h2>1000$</h2>
+        </div>
+        <div class="elements">
+            <div class="element-in-country">
+                <div class="flex-content">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Adis_windfall_harbor.jpg/400px-Adis_windfall_harbor.jpg" alt="">
+                    <p>
+                        Займаючи більшу частину острова Адміралті (7-ий за площею у США), ця пам'ятка є частиною національного лісу Тонґасс у південно-східній Алясці. Має велику популяцію грізлі, американських чорних та бурих ведмедів, а також китів, гірських кіз та оленів.
+                    </p>
+                </div>
+                <div class="buy-info">
+                    <label>111$ <button id="usa-1">Додати до суми</button></label>
+                </div>
+            </div>
+            <div class="element-in-country">
+                <div class="flex-content">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/African_Burial_Ground.jpg/400px-African_Burial_Ground.jpg" alt="">
+                    <p>
+                        Заново відкритий у 1991 році під час підготовки до будівництва нової федеральної будівлі, цей колишній цвинтар, що містить залишки понад 400 вільних африканців і рабів, похованих у 17—18 століттях, був проголошений національною історичною пам'яткою у 1993 році.
+                    </p>
+                </div>
+                <div class="buy-info">
+                    <label>111$ <button id="usa-2">Додати до суми</button></label>
+                </div>
+            </div>
+            <div class="element-in-country">
+                <div class="flex-content">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/%22Ormston%2C%22_John_Edward_Aldred_house%2C_East_Beach_Drive%2C_Glen_Cove%2C_New_York._Fountain_LCCN2008680046.jpg/560px-%22Ormston%2C%22_John_Edward_Aldred_house%2C_East_Beach_Drive%2C_Glen_Cove%2C_New_York._Fountain_LCCN2008680046.jpg" alt="">
+                    <p>
+                        Має́ток Джо́на О́лдреда, також відомий як монасти́р Святого Йосафа́та — історичний маєток, розташований у Латтінгтауні в окрузі Нассау, Нью-Йорк. Був спроектований у 1916 році архітектором Бертрамом Гудх'ю. Ландшафтний дизайн було спроектовано братами Олмстед, для керівника комунального підприємства Джона Едварда Олдреда.
+                    </p>
+                </div>
+                <div class="buy-info">
+                    <label>111$ <button id="usa-3">Додати до суми</button></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="british" class="hide">
+    <div class="country-attribute-and-info">
+        <div class="img-about-info-country">
+            <h1>Великобританія</h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/1200px-Flag_of_the_United_Kingdom_%283-5%29.svg.png" alt="">
+        </div>
+        <div class="info-about-country">
+            <h3>
+                Королі́вство Вели́кої Брита́нії (англ. Kingdom of Great Britain), офіційно Велика Британія (Great Britain)[1] — держава, розташована в Західній Європі, що утворилася внаслідок злиття Шотландського королівства і Англійського королівства згідно з Актом про унію 1707. Іменувалася так з 1707 по 1800.
+            </h3>
+            <h2>1000$</h2>
+        </div>
+        <div class="elements">
+            <div class="element-in-country">
+                <div class="flex-content">
+                    <img src="https://tripmydream.cc/travelhub/travel/blocks/20/986/block_20986.jpg?v1" alt="">
+                    <p>
+                        Букінгемський палац — це резиденція короля Великобританії. З ХІХ століття це місце вважається постійним для офіційних прийомів. Крім того, тут мешкає британська королівська династія.
+                    </p>
+                </div>
+                <div class="buy-info">
+                    <label>111$ <button id="uk-1">Додати до суми</button></label>
+                </div>
+            </div>
+            <div class="element-in-country">
+                <div class="flex-content">
+                    <img src="https://tripmydream.cc/travelhub/travel/blocks/20/988/block_20988.jpg?v1" alt="">
+                    <p>
+                        Біг-Бен — Символ величі британців. Якщо спитати місцевого жителя яка пам'ятка у Великій Британії вважається найпопулярнішою, він без зволікання назве цю величну споруду.
+                    </p>
+                </div>
+                <div class="buy-info">
+                    <label>111$ <button id="uk-2">Додати до суми</button></label>
+                </div>
+            </div>
+            <div class="element-in-country">
+                <div class="flex-content">
+                    <img src="https://tripmydream.cc/travelhub/travel/blocks/20/990/block_20990.jpg?v1" alt="">
+                    <p>
+                        Трафальгарська площа — національне надбання Великобританії. Сюди приїжджають ті, хто хоче відпочити від міської метушні та помилуватися чудовими фонтанами.
+                    </p>
+                </div>
+                <div class="buy-info">
+                    <label>111$ <button id="uk-3">Додати до суми</button></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="japan" class="hide">
+    <div class="country-attribute-and-info">
+        <div class="img-about-info-country">
+            <h1>Японія</h1>
+            <img src="https://ukranews.com/upload/news/2016/09/23/57e54e4fbcb97-1-flag-yaponii-b_1200.jpg" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Imperial_Seal_of_Japan.svg/1200px-Imperial_Seal_of_Japan.svg.png" alt="">
+        </div>
+        <div class="info-about-country">
+            <h3>
+                Япо́нія (яп. 日本, にっぽん / にほん, МФА: [nip̚.poɴ] / [nihoɴ]),
+                офіційна назва — Япо́нська Держа́ва[6] — острівна держава в Східній Азії.
+                Розташована на Японському архіпелазі, межує з Японським морем на заході й Тихим
+                океаном на сході, також простягається від Охотського моря на північному сході до
+                Східно-Китайського та Філіппінського морів на південному заході. Будучи частиною
+                Тихоокеанського вогняного кола, Японія охоплює архіпелаг з 14 125 островів[7]; п'ятьма
+                основними островами, з півночі на південь є Хоккайдо, Хонсю, Сікоку, Кюсю та Окінава.
+            </h3>
+            <h2>1000$</h2>
+        </div>
+        <div class="elements">
+            <div class="element-in-country">
+                <div class="flex-content">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Miyajima_Alex.jpg/500px-Miyajima_Alex.jpg" alt="">
+                    <p>
+                        За переказом, у 593 році за наказом імператриці Суйко закладено святилище на острові Іцукусіма для вшанування трьох богинь моря і торгівлі — Таґірі Хіме, Ітікісіма Хіме та Таґіцу Хіме. Його збудував володар провінції Акі Саекі но Курамото. Його нащадки стали пожиттєвими священиками цього святилища.
+                    </p>
+                </div>
+                <div class="buy-info">
+                    <label>111$ <button id="japan-1">Додати до суми</button></label>
+                </div>
+            </div>
+            <div class="element-in-country">
+                <div class="flex-content">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Himeji_Castle_The_Keep_Towers.jpg/540px-Himeji_Castle_The_Keep_Towers.jpg" alt="">
+                    <p>
+                        Замок Хімеджі (яп. 姫路城, ひめじじょう) — японський замок у місті Хімеджі, префектури Хьоґо, Японія. Назва походить від гори Хіме, біля підніжжя якої він розташований. Також відомий як «замок білої чаплі» (яп. 白鷺城, шірасаґіджьо). Був побудований у 1346 як один із замків роду Акамацу. Знаходиться на високому пагорбі, оточеному трьома кільцями фортечних стін білого кольору, верхня частина яких вкрита сірою черепицею.
+                    </p>
+                </div>
+                <div class="buy-info">
+                    <label>111$ <button id="japan-2">Додати до суми</button></label>
+                </div>
+            </div>
+            <div class="element-in-country">
+                <div class="flex-content">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Byodo-in_Uji01pbs2640.jpg/500px-Byodo-in_Uji01pbs2640.jpg" alt="">
+                    <p>
+                        Монасти́р Бьо́до або Бьо́до-і́н (яп. 平等院, びょうどういん, МФА: [bʲoːdoː in], «монастир рівності») — буддистський монастир в Японії. Розташований за адресою: префектура Кіото, місто Удзі, мікрорайон Удзі-Ренґе 116. Монастирський титул — гора Ранкового сонця[1]. Головною святинею монастиря є статуя будди Аміди. До цінних пам'яток належать храм феніксів (національний скарб Японії). До середини 19 століття перебував під відомством двох сект: Тендай і Дзьодо. Об'єкт Світової Спадщини ЮНЕСКО в Японії, Національний скарб Японії.
+                    </p>
+                </div>
+                <div class="buy-info">
+                    <label>111$ <button id="japan-3">Додати до суми</button></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="canada" class="hide">
+    <div class="country-attribute-and-info">
+        <div class="img-about-info-country">
+            <h1>Канада</h1>
+            <img src="https://st.depositphotos.com/1244201/2698/i/950/depositphotos_26986749-stock-photo-canada-flag.jpg" alt="">
+            <img src="https://w7.pngwing.com/pngs/792/697/png-transparent-arms-of-canada-coat-of-arms-province-of-canada-heraldry-coat-of-arms-maple-leaf-canada-window.png" alt="">
+        </div>
+        <div class="info-about-country">
+            <h3>
+                Канада – североамериканская страна, простирающаяся от границы с США на юге до полярного круга на севере. Крупнейшие города – многолюдный Торонто, расположенный на западном побережье центр киноиндустрии Ванкувер, франкоязычные Монреаль и Квебек и столица страны Оттава. Значительную часть Канады занимают территории с дикой природой, в том числе национальный парк Банф в Скалистых горах со множеством озер. Кроме того, здесь находится всемирно известный Ниагарский водопад.
+            </h3>
+            <h2>1000$</h2>
+        </div>
+        <div class="elements">
+            <div class="element-in-country">
+                <div class="flex-content">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/DundurnCastleSummer.JPG/550px-DundurnCastleSummer.JPG" alt="">
+                    <p>
+                        Замок Дандерн — це історичне неокласичне шато на бульварі Йорк у Гамільтоні, Онтаріо, Канада. На будівництво замку площею 1700 м² пішло три роки, вартість спорудження винесла 175 000 доларів, і він був завершений у 1835 році[3]. Сорокакімнатний замок мав новітні зручності – газове освітлення та водопровід[3]. Зараз він належить місту Гамільтон, яке придбало його в 1899-1900 році за 50 000 доларів[4][3]. Місто витратило майже 3 мільйони доларів на реконструкцію споруди, щоб зробити її відкритою для відвідувачів[3]. Кімнати були відреставровані до вигляду, який вони мали до 1855 року, коли його власник сер Аллан Неп'єр Макнаб, 1-й баронет, був на піку своєї кар'єри. Костюмовані екскурсоводи провадять відвідувачів по дому, ілюструючи повсякденне життя з 1850-х років. Герцогиня Корнвольська, яка походить
+                    </p>
+                </div>
+                <div class="buy-info">
+                    <label>111$ <button id="canada-1">Додати до суми</button></label>
+                </div>
+            </div>
+            <div class="element-in-country">
+                <div class="flex-content">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Casa_Loma%2C_Toronto_%286264979572%29.jpg/500px-Casa_Loma%2C_Toronto_%286264979572%29.jpg" alt="">
+                    <p>
+                        Каса Лома (ісп. Casa Loma, в перекладі з іспанської — будинок на пагорбі) — неоготична замкова садиба, розміщена на пагорбі Давенпорт[en], на висоті 152 м н.р.м., у місті Торонто, в Канаді. Маєток Каса Лома побудований у 1911—1914 роках сером Генрі Пелатом[en].
+                    </p>
+                </div>
+                <div class="buy-info">
+                    <label>111$ <button id="canada-2">Додати до суми</button></label>
+                </div>
+            </div>
+            <div class="element-in-country">
+                <div class="flex-content">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Château_Frontenac01.jpg/560px-Château_Frontenac01.jpg" alt="">
+                    <p>
+                        «Замок Фронтенака» було спроектовано і побудовано американським архітектором Брюсом Прайсом на замовлення компанії «Канадська тихоокеанська залізниця». Його відкриття сталося 1893 року. Центральна вежа та інші новіші частини готелю були пізніше спроектовані Вільямом Сазерлендом Максвеллом. У 1926 готель був добудований. У 1943 році на Квебекській конференції в ньому вели переговори Вінстон Черчилль і Франклін Рузвельт.
+                    </p>
+                </div>
+                <div class="buy-info">
+                    <label>111$ <button id="canada-3">Додати до суми</button></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="value">
+    <h3>Орієнтовна ціна: </h3>
+    <h3 id="sum">fff</h3>
+    <h3>$</h3>
+</div>
+
+<script>
+    const nav_ukraine = document.getElementById('option1');
+    const nav_usa = document.getElementById('option2');
+    const nav_uk = document.getElementById('option3');
+    const nav_japan = document.getElementById('option4');
+    const nav_canada = document.getElementById('option5');
+
+    const content_about_country = {
+        ukraine : document.getElementById('ukraine'),
+        usa : document.getElementById('usa'),
+        uk : document.getElementById('british'),
+        japan : document.getElementById('japan'),
+        canada : document.getElementById('canada'),
+        hide_all: function (content) {
+            Object.values(this).forEach((el) => {
+                if (el instanceof Element && el !== content) {
+                    el.classList.add('hide');
+                }
+            });
+            content.classList.remove('hide');
+        },
+    };
+    nav_ukraine.addEventListener('click',()=>{
+        content_about_country.hide_all(content_about_country.ukraine);
+        sum.textContent = "200";
+    });
+    nav_usa.addEventListener('click',()=>{
+        content_about_country.hide_all(content_about_country.usa);
+        sum.textContent = "1000";
+    });
+    nav_uk.addEventListener('click',()=>{
+        content_about_country.hide_all(content_about_country.uk);
+        sum.textContent = "1000";
+    });
+    nav_japan.addEventListener('click',()=>{
+        content_about_country.hide_all(content_about_country.japan);
+        sum.textContent = "1000";
+    });
+    nav_canada.addEventListener('click',()=>{
+        content_about_country.hide_all(content_about_country.canada);
+        sum.textContent = "1000";
+    });
+
+    const button_ukraine_1 = document.getElementById('ukraine-1');
+    const button_ukraine_2 = document.getElementById('ukraine-2');
+    const button_ukraine_3 = document.getElementById('ukraine-3');
+
+    const button_usa_1 = document.getElementById('usa-1');
+    const button_usa_2 = document.getElementById('usa-2');
+    const button_usa_3 = document.getElementById('usa-3');
+
+    const button_uk_1 = document.getElementById('uk-1');
+    const button_uk_2 = document.getElementById('uk-2');
+    const button_uk_3 = document.getElementById('uk-3');
+
+    const button_japan_1 = document.getElementById('japan-1');
+    const button_japan_2 = document.getElementById('japan-2');
+    const button_japan_3 = document.getElementById('japan-3');
+
+    const button_canada_1 = document.getElementById('canada-1');
+    const button_canada_2 = document.getElementById('canada-2');
+    const button_canada_3 = document.getElementById('canada-3');
+
+    button_ukraine_1.addEventListener('click', () => {
+        sum.textContent = parseInt(sum.textContent) + 111;
+    });
+
+    button_ukraine_2.addEventListener('click', () => {
+        sum.textContent = parseInt(sum.textContent) + 111;
+    });
+
+    button_ukraine_3.addEventListener('click', () => {
+        sum.textContent = parseInt(sum.textContent) + 111;
+    });
+
+    button_usa_1.addEventListener('click', () => {
+        sum.textContent = parseInt(sum.textContent) + 111;
+    });
+
+    button_usa_2.addEventListener('click', () => {
+        sum.textContent = parseInt(sum.textContent) + 111;
+    });
+
+    button_usa_3.addEventListener('click', () => {
+        sum.textContent = parseInt(sum.textContent) + 111;
+    });
+    button_uk_1.addEventListener('click', () => {
+        sum.textContent = parseInt(sum.textContent) + 111;
+    });
+
+    button_uk_2.addEventListener('click', () => {
+        sum.textContent = parseInt(sum.textContent) + 111;
+    });
+
+    button_uk_3.addEventListener('click', () => {
+        sum.textContent = parseInt(sum.textContent) + 111;
+    });
+    button_japan_1.addEventListener('click', () => {
+        sum.textContent = parseInt(sum.textContent) + 111;
+    });
+
+    button_japan_2.addEventListener('click', () => {
+        sum.textContent = parseInt(sum.textContent) + 111;
+    });
+
+    button_japan_3.addEventListener('click', () => {
+        sum.textContent = parseInt(sum.textContent) + 111;
+    });
+    button_canada_1.addEventListener('click', () => {
+        sum.textContent = parseInt(sum.textContent) + 111;
+    });
+
+    button_canada_2.addEventListener('click', () => {
+        sum.textContent = parseInt(sum.textContent) + 111;
+    });
+
+    button_canada_3.addEventListener('click', () => {
+        sum.textContent = parseInt(sum.textContent) + 111;
+    });
+
+    const sum = document.getElementById('sum');
+    const sum_value = 0;
+    sum.textContent = `${sum_value}`;
+</script>
+</body>
+</html>

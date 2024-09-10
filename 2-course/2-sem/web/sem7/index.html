@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="..." crossorigin="anonymous" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        #first-monitor{
+            background-image: url("https://i.etsystatic.com/40908663/r/il/1e800d/4707100082/il_fullxfull.4707100082_t0ek.jpg");
+        }
+        .navigation{
+            padding: 20px 10px;
+            height: 20%;
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .icon{
+            width: 40%;
+            display: flex;
+            align-items: center;
+        }
+        .icon p{
+            padding-top: 8px;
+            font-size: 30px;
+        }
+        .buttons{
+            display: flex;
+            justify-content: flex-end;
+            width: 58%;
+        }
+        .buttons .btn{
+            margin: 20px;
+            border: none;
+        }
+        .main-text{
+            padding-top: 130px;
+            height: 80%;
+            width: 100%;
+            text-align: center;
+            justify-items: center;
+            color:white;
+        }
+
+        .btn-in-main-text{
+            margin: 0 auto;
+            width: 40%;
+        }
+
+        #second-monitor{
+            background-color: white;
+        }
+
+
+        .custom-div {
+            height: 600px;
+            width: 400px;
+            box-shadow: 8px 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .custom-div-1{
+            height: 80%;
+            width: 100%;
+            background-color: white;
+        }
+        .custom-div-2{
+            height: 20%;
+            width: 100%;
+            background-color: gold;
+        }
+        #third-monitor{
+            background-repeat: no-repeat;
+        }
+        .he{
+            height: 150vh;
+        }
+        .hehe{
+            margin-top: -200px;
+        }
+        .hehe .custom-div{
+            height: 350px;
+        }
+        .divider{
+            width: 100%;
+            height: 30vh;
+            background-color: gold;
+        }
+        .divider:last-of-type{
+            margin-top: 420px;
+            background-image: url("https://www.analyticsinsight.net/wp-content/uploads/2023/08/10-Facts-About-Coding-and-programming-languages.jpg");
+        }
+        #five-monitor .element-in-flex{
+            width:500px;
+            height: 400px;
+            /*background-color: silver;*/
+        }
+        .last-divider{
+            position: relative;
+            bottom: 0;
+            height: 30%;
+            background-color: gold;
+        }
+
+        .max-size{
+            height: 100vh;
+            width: 100%;
+        }
+
+        .text-orange{
+            color:orange;
+        }
+
+        .text-white{
+            color: white;
+        }
+
+        .text-black{
+            color:black;
+        }
+        .yellow-bg {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<section id="first-monitor" class="bg-image max-size" style="background-image: url('https://i.etsystatic.com/40908663/r/il/1e800d/4707100082/il_fullxfull.4707100082_t0ek.jpg');">
+    <div class="container d-flex flex-column justify-content-center align-items-center h-100">
+        <div class="navigation">
+            <div class="icon">
+                <i class="fas fa-anchor fa-5x text-orange"></i>
+                <p class="text-white"></p>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-outline-light btn-lg"> <i class="bi bi-instagram"></i></button>
+                <button class="btn btn-outline-light btn-lg"> <i class="bi bi-telegram"></i></button>
+                <button class="btn btn-outline-light btn-lg"> <i class="bi bi-twitter"></i></button>
+                <button class="btn btn-outline-light btn-lg"> <i class="fa-solid fa-phone"></i></button>
+                <button class="btn btn-warning btn-lg"> <i class="bi bi-github"></i></button>
+            </div>
+        </div>
+
+        <div class="main-text text-white">
+            <h1 class="display-1">It's 2D city <i class="fas fa-city"></i></h1>
+            <p class="lead"> <i class="fas fa-bullhorn"></i> Use Font-Awesome for icons, and use Bootstrap for beatify html</p>
+            <div class="btn-in-main-text d-flex justify-content-between">
+                <button class="btn btn-warning btn-lg">Use Font-Awesome <i class="fas fa-wifi"></i></button>
+                <button class="btn btn-warning btn-lg">Use Bootstrap <i class="fas fa-hammer"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="second-monitor" class=" max-size">
+    <div class="container d-flex flex-column justify-content-start align-items-center">
+        <h1 class="text-black mt-5">For learning html and css:</h1>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="custom-div">
+                    <div class="custom-div-1">
+                        <div class="text-center">
+                            <h1>FreeCodeCamp (<i class="fas fa-fire"></i>)</h1>
+                            <p>Learn to code — for free.
+                                Build projects.
+                                Earn certifications.
+                                Since 2014, more than 40,000 freeCodeCamp.org graduates have gotten jobs at tech companies including:</p>
+                            <p>Earn free verified certifications with freeCodeCamp's core curriculum:</p>
+                        </div>
+                    </div>
+                    <div class="custom-div-2 d-flex justify-content-center align-items-center">
+                        <div class="btn btn-lg">Show more</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="custom-div">
+                   <div class="custom-div-1">
+                       <div class="text-center">
+                           <h1>Font-Awesome <i class="fa-solid fa-flag"></i></i></h1>
+                           <p>Take the hassle out of icons in your project.
+
+                               Font Awesome is the Internet's icon library and toolkit, used by millions of designers, developers, and content creators.
+                               1 line of code… 30,000+ icons.
+
+                               Don't download, install, manage, or publish icon files – our Kits CDN does it all for you. Create a free account and get your very own Font Awesome Kit to start your first project.
+                               Your Personal CDN
+
+                               Add our super-simple embed code to your site and have instant access to ALL of Font Awesome.
+
+                               <i class="fa-regular fa-heart"></i></p>
+                       </div>
+                   </div>
+                    <div class="custom-div-2 d-flex justify-content-center align-items-center">
+                        <div class="btn btn-lg">Show more</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="custom-div">
+                    <div class="custom-div">
+                        <div class="custom-div-1">
+                            <div class="text-center">
+                                <h1>Bootstrap <i class="fa-brands fa-bootstrap"></i></h1>
+                                <p>Build fast, responsive sites with Bootstrap
+                                    Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p>
+                            </div>
+                        </div>
+                        <div class="custom-div-2 d-flex justify-content-center align-items-center">
+                            <div class="btn btn-lg">Show more</div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="third-monitor" class="max-size bg-image" style="background-image: url('https://images7.alphacoders.com/133/1337527.png');">
+    <div class="main-text text-white">
+        <h1>Programing it's cool</h1>
+        <p>Computer programming or coding is the composition of sequences <br>
+            of instructions, called programs, that computers can follow to perform tasks.[1][2] It <br>
+            involves designing and implementing algorithms, step-by-step specifications of procedures, <br>
+            by writing code in one or more programming languages. Programmers typically use high-level programming <br>
+            languages that are more easily intelligible to humans than machine code, which is directly executed by the central processing unit. </p>
+        <div class="btn btn-warning btn-lg">CLICK PLEASE</div>
+    </div>
+
+    <div class="hehe container d-flex justify-content-center">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="custom-div m-5">
+                    <div class="custom-div-1 text-center">
+                        <h1 class="text-orange">Hello</h1>
+                        <h3>Don't click</h3>
+                        <p>xdcfgvbhjiko <br>
+                        xdtcfygvubhijnokmp <br>
+                        xretcfyvgubhinjompk,[ <br></p>
+                    </div>
+                    <div class="custom-div-2 text-center"></div>
+                </div>
+                <div class="custom-div m-5">
+                    <div class="custom-div-1 text-center">
+                        <h1 class="text-orange">Hello</h1>
+                        <h3>Maybe click?</h3>
+                        <p>xdcfgvbhjiko <br>
+                            xdtcfygvubhijnokmp <br>
+                            xretcfyvgubhinjompk,[ <br></p>
+                    </div>
+                    <div class="custom-div-2 text-center"> </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="custom-div m-5">
+                    <div class="custom-div-1 text-center">
+                        <h1 class="text-orange">Hello</h1>
+                        <h3>Are you sure?</h3>
+                        <p>xdcfgvbhjiko <br>
+                            xdtcfygvubhijnokmp <br>
+                            xretcfyvgubhinjompk,[ <br></p>
+                    </div>
+                    <div class="custom-div-2 text-center"></div>
+                </div>
+                <div class="custom-div m-5">
+                    <div class="custom-div-1 text-center">
+                        <h1 class="text-orange">Hello</h1>
+                        <h3>Okay:)</h3>
+                        <p>xdcfgvbhjiko <br>
+                            xdtcfygvubhijnokmp <br>
+                            xretcfyvgubhinjompk,[ <br></p>
+                    </div>
+                    <div class="custom-div-2 text-center"></div>
+                </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="four-monitor" class="max-size">
+
+</section>
+
+<section class="divider">
+    <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+        <h1>It's work!</h1>
+    </div>
+</section>
+<section id="five-monitor" class="max-size">
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="element-in-flex m-5">
+                    <h3>C++</h3>
+                    <p>C++ (/ˈsiː plʌs plʌs/, pronounced "C plus plus" and sometimes abbreviated as CPP) is a high-level,
+                        general-purpose programming language created by Danish computer scientist Bjarne Stroustrup. First released
+                        in 1985 as an extension of the C programming language, it has since expanded significantly over time; as of 1997,
+                        C++ has object-oriented, generic, and functional features, in addition to facilities for low-level memory manipulation
+                        for making things like microcomputers or to make operating systems like Linux or Windows. It is almost always implemented as
+                        a compiled language, and many vendors provide C++ compilers, including the Free Software Foundation, LLVM, Microsoft, Intel, Embarcadero, Oracle, and IBM.[14]</p>
+                    <div class="btn btn-warning btn-lg"> Show more</div>
+                </div>
+                <div class="element-in-flex m-5" style="background-image: url('https://potomac.edu/wp-content/uploads/2020/12/benefits-of-coding-e1606911064541.jpg');"></div>
+                <div class="element-in-flex m-5">
+                    <h3>JS</h3>
+                    <p>JavaScript (/ˈdʒɑːvəskrɪpt/), often abbreviated as JS, is a programming language and core technology of the Web, alongside HTML and CSS. 99% of websites use JavaScript on the client side for webpage behavior.[10]
+                        Web browsers have a dedicated JavaScript engine that executes the client code. These engines are also utilized in some servers and a variety of apps. The most popular runtime system for non-browser usage is Node.js.
+                        JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[11] It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm,
+                         standard data structures, and the Document Object Model (DOM).</p>
+                    <div class="btn btn-warning btn-lg"> Show more</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="element-in-flex m-5" style="background-image: url('https://potomac.edu/wp-content/uploads/2020/12/benefits-of-coding-e1606911064541.jpg');"></div>
+                <div class="element-in-flex m-5">
+                    <h3>Java</h3>
+                    <p>Java is a high-level, class-based, object-oriented programming
+                        language that is designed to have as few implementation dependencies
+                        as possible. It is a general-purpose programming language intended to
+                        let programmers write once, run anywhere (WORA),[16] meaning that compiled
+                        Java code can run on all platforms that support Java without the need to recompile.[17]
+                        Java applications are typically compiled to bytecode that can run on any Java virtual machine
+                        (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to C and
+                        C++, but has fewer low-level facilities than either of them. The Java runtime provides dynami</p>
+                    <div class="btn btn-warning btn-lg"> Show more</div>
+                </div>
+                <div class="element-in-flex m-5" style="background-image: url('https://potomac.edu/wp-content/uploads/2020/12/benefits-of-coding-e1606911064541.jpg');"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="divider">
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100%;">
+        <h1 class="text-white" style="text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);">If you learn coding === 300 000$ in second:D</h1>
+    </div>
+</section>
+
+
+<footer style="height: 10vh;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mt-5">
+                <div class="icon">
+                    <i class="fas fa-anchor fa-5x text-orange"></i>
+                    <p class="text-orange">Anchor</p>
+                </div>
+            </div>
+            <div class="col-md-3 mt-5">
+                <h3>Title 1</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Consectetur adipiscing elit.</p>
+                <p>Sed do eiusmod tempor.</p>
+                <p>Ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col-md-3 mt-5">
+                <h3>Title 2</h3>
+                <p>Ut enim ad minim veniam.</p>
+                <p>Quis nostrud exercitation ullamco laboris.</p>
+                <p>Nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit.</p>
+            </div>
+            <div class="col-md-3 mt-5">
+                <h3>Title 3</h3>
+                <p>Excepteur sint occaecat cupidatat non proident.</p>
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident.</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="last-divider"></div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/bcbcf72c46.js" crossorigin="anonymous"></script>
+</body>
+</html>

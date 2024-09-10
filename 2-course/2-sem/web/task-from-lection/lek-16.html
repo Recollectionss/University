@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 10px;
+        }
+        .info{
+            width: 500px;
+            height: 50%;
+            margin:auto;
+            border: 1px solid silver;
+            text-align: center;
+        }
+        .flex{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .grid{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+        .time-show{
+            margin: 10px;
+            color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h1>Task 1</h1>
+        <div class="flex">
+            <h2>You visit this website:</h2>
+            <h3 id="time-show" class="time-show">ff</h3>
+        </div>
+        <div class="add-element-to-Obj">
+            <h1>Task 2</h1>
+            <div class="grid">
+                <div class="first-element">
+                    <label>Write key
+                        <input type="text" id="key-input">
+                    </label>
+                </div>
+                <div class="second-element">
+                    <label>Write value
+                        <input type="text" id="value-input">
+                    </label>
+                </div>
+                <button id="add-key-and-value-for-Obj">Click if add</button>
+                <div class="show-all-elements-Obj">
+                    <p id="elements-Obj"></p>
+                </div>
+            </div>
+            <div class="show-elements-in-Obj">
+                <h1>Task 3</h1>
+                <div class="grid">
+                    <div class="first-element">
+                        <h2>First method: </h2>
+                        <p id="first-method-show"></p>
+                    </div>
+                    <div class="second-element">
+                        <h2>Second method: </h2>
+                        <p id="second-method-show"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+    // Task 1
+        const time_show = document.getElementById('time-show');
+        let currentDate = new Date();
+
+        let year = currentDate.getFullYear();
+        let month = currentDate.getMonth() + 1;
+        let day = currentDate.getDate();
+        let hours = currentDate.getHours();
+        let minutes = currentDate.getMinutes();
+        let seconds = currentDate.getSeconds();
+
+        hours = (hours < 10) ? '0' + hours : hours;
+        minutes = (minutes < 10) ? '0' + minutes : minutes;
+        seconds = (seconds < 10) ? '0' + seconds : seconds;
+        let formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+        time_show.textContent = formattedDateTime;
+
+    //Task 2
+        const key_input = document.getElementById('key-input');
+        const value_input = document.getElementById('value-input');
+        const button = document.getElementById('add-key-and-value-for-Obj');
+        const element = document.getElementById('elements-Obj');
+
+        let obj = {};
+
+        button.addEventListener('click', () => {
+            addToObj(obj, key_input.value, value_input.value);
+
+            //For Task 3
+            first_method();
+            second_method();
+        });
+
+        function addToObj(Obj, key, value) {
+            if (key && value) {
+                Obj[key] = value;
+                element.textContent += `Key :${key}, Value :${Obj[key]}\n`;
+                alert("You added a new element to Obj!");
+            } else {
+                alert("Please fill in both key and value fields.");
+            }
+
+        }
+
+    //Task 3
+        const first_method_show = document.getElementById('first-method-show');
+        const second_method_show = document.getElementById('second-method-show');
+        function first_method(){
+            Object.entries(obj).forEach(([key, value]) => {
+                first_method_show.textContent += `${value},\n`;
+            });
+        }
+        function second_method(){
+            const values = Object.values(obj);
+            for (let value of values) {
+                second_method_show.textContent += `${value},\n`;
+            }
+        }
+    </script>
+</body>
+</html>

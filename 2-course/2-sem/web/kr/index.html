@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            width: 40%;
+            height: auto;
+            padding: 3em;
+            margin: 5em auto;
+            background-color: rgba(100, 149, 237, 0.7);
+            display: grid;
+            justify-content: center;
+            text-align: center;
+        }
+        .field-input input {
+            border-radius: 2em;
+            height: 1.2em;
+            font-size: 1.2em;
+        }
+        .btn {
+            margin-top: 1em;
+        }
+        .btn button {
+            border-radius: 0.5rem;
+        }
+        #add-number-button {
+            background-color: rgba(255, 255, 0, 0.53);
+        }
+        #generate-histogram-button {
+            background-color: rgba(124, 252, 0, 0.65);
+        }
+        #add-tooltip-button{
+            background-color: rgba(124, 252, 0, 0.65);
+        }
+        .histogram {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            margin-top: 20px;
+            height: 300px;
+            border: 1px solid #ccc;
+        }
+        .bar {
+            width: 30px;
+            background-color: steelblue;
+            text-align: center;
+            color: white;
+            margin: 0 5px;
+        }
+        /* Tooltip styles */
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position the tooltip above the text */
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+        .tooltip-container:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Task 1: Histogram -->
+    <form id="inputForm">
+        <h1>Task-1: histogram</h1>
+        <div class="field-input">
+            <input type="number" name="number" placeholder="number...">
+        </div>
+        <div class="btn">
+            <button type="button" id="add-number-button">Add number</button>
+            <button type="button" id="generate-histogram-button">Generate histogram</button>
+        </div>
+    </form>
+    <div class="histogram" id="histogram"></div>
+
+    <!-- Task 2: Tooltip -->
+    <div id="task2">
+        <h1>Task-2: Tooltip</h1>
+        <p>Hover over the text below to see the tooltip:</p>
+        <div class="tooltip-container" id="tooltip-container-1">
+            <span>Hover over me!</span>
+            <div class="tooltip">This is a tooltip</div>
+        </div>
+        <h2>Add new tooltip</h2>
+        <div class="field-input">
+            <input type="text" id="new-tooltip-text" placeholder="Tooltip text...">
+            <input type="text" id="new-tooltip-target" placeholder="Target text...">
+        </div>
+        <div class="btn">
+            <button type="button" id="add-tooltip-button">Add Tooltip</button>
+        </div>
+        <div id="tooltip-targets">
+            <p>Some text to add tooltips to.</p>
+            <p>Another piece of text for tooltips.</p>
+        </div>
+    </div>
+</div>
+<script>
+    // Task 1: Histogram
+    document.getElementById('add-number-button').addEventListener('click', function() {
+        const inputField = document.querySelector('.field-input');
+        const newInput = document.createElement('input');
+        newInput.type = 'number';
+        newInput.name = 'number';
+        newInput.placeholder = 'Enter a number';
+        inputField.appendChild(newInput);
+    });
+
+    document.getElementById('generate-histogram-button').addEventListener('click', function() {
+        const numbers = Array.from(document.querySelectorAll('input[name="number"]'))
+            .map(input => Number(input.value))
+            .filter(value => !isNaN(value));
+
+        if (numbers.length === 0) {
+            alert('Please enter some numbers');
+            return;
+        }
+
+        const maxNumber = Math.max(...numbers);
+
+        const histogram = document.getElementById('histogram');
+        histogram.innerHTML = '';
+
+        numbers.forEach(number => {
+            const bar = document.createElement('div');
+            bar.className = 'bar';
+            bar.style.height = `${(number / maxNumber) * 100}%`;
+            bar.textContent = number;
+            histogram.appendChild(bar);
+        });
+    });
+
+    // Task 2: Tooltip
+    document.getElementById('add-tooltip-button').addEventListener('click', function() {
+        const tooltipText = document.getElementById('new-tooltip-text').value;
+        const targetText = document.getElementById('new-tooltip-target').value;
+
+        if (!tooltipText || !targetText) {
+            alert('Please enter both tooltip text and target text.');
+            return;
+        }
+
+        const tooltipContainer = document.createElement('div');
+        tooltipContainer.className = 'tooltip-container';
+
+        const targetSpan = document.createElement('span');
+        targetSpan.textContent = targetText;
+
+        const tooltipDiv = document.createElement('div');
+        tooltipDiv.className = 'tooltip';
+        tooltipDiv.textContent = tooltipText;
+
+        tooltipContainer.appendChild(targetSpan);
+        tooltipContainer.appendChild(tooltipDiv);
+
+        document.getElementById('tooltip-targets').appendChild(tooltipContainer);
+    });
+</script>
+</body>
+</html>
+
