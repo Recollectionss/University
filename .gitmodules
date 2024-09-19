@@ -4,3 +4,6 @@
 [submodule "3-course/mss_lab_1"]
 	path = 3-course/mss_lab_1
 	url = https://github.com/Observersss/mss_lab_1.git
+[submodule "3-course/numeral-methods/numeral-methods"]
+	path = 3-course/numeral-methods/numeral-methods
+	url = https://github.com/Observersss/numeral-methods.git
