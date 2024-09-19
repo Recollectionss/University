@@ -1,9 +1,6 @@
-[submodule "3-course/numeraticMethods/3-course/numeraticMethods"]
-	path = 3-course/numeraticMethods/3-course/numeraticMethods
-	url = https://github.com/Observersss/mss_lab_1.git
-[submodule "3-course/mss_lab_1"]
-	path = 3-course/mss_lab_1
-	url = https://github.com/Observersss/mss_lab_1.git
-[submodule "3-course/numeral-methods/numeral-methods"]
-	path = 3-course/numeral-methods/numeral-methods
+[submodule "3-course/mss"]
+	path = 3-course/mss
+	url = https://github.com/Observersss/mss.git
+[submodule "3-course/--force"]
+	path = 3-course/--force
 	url = https://github.com/Observersss/numeral-methods.git
