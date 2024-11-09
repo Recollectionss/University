@@ -1,0 +1,2 @@
+D:\programmin\univ\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe
+D:\programmin\C++\univ\1_practise_longNumbers\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe
