@@ -1,0 +1,41 @@
+let
+  function read_unsigned() : int =
+    let
+      var c : string := ""
+      var n : int := 0
+      var is_valid : int := 1
+      var first_char : int := 1
+    in
+      while is_valid = 1 do (
+        c := getchar();
+        if c = "" then () /* EOF */
+        else if c = "\n" then break
+        else (
+          if first_char = 1 & c = "-" then
+            first_char := 0
+          else (
+            first_char := 0;
+            if ord(c) >= ord("0") & ord(c) <= ord("9") then
+              n := n * 10 + (ord(c) - ord("0"))
+            else
+              is_valid := 0
+          );
+          if is_valid = 1 then (
+            print("Read char: ");
+            print(c);
+            print(", ASCII: ");
+            print_int(ord(c));
+            print("\n")
+          )
+        )
+      );
+      if is_valid = 1 then n else -1
+    end
+
+  var result : int := read_unsigned()
+in
+  print("Result: ");
+  print_int(result);
+  print("\n")
+end
+

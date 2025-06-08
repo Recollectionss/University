@@ -1,0 +1,7 @@
+schema Test {
+  type User = record {
+    name: string;
+    age: int;
+    active: bool;
+  }
+}

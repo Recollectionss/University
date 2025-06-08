@@ -1,0 +1,9 @@
+schema Test {
+  type User = record {
+    name: string;
+    age: 12years;
+    active: bool;
+    note: "unterminated
+    bad@token: int;
+  }
+}
