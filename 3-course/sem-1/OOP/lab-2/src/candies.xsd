@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+    <xsd:element name="root">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="candy" type="candy" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="candy">
+            <xsd:sequence>
+                <xsd:element name="name" type="xsd:string"/>
+                <xsd:element name="energy" type="xsd:int"/>
+                <xsd:element name="type">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:enumeration value="Caramel"/>
+                            <xsd:enumeration value="Iris"/>
+                            <xsd:enumeration value="Chocolate"/>
+                            <xsd:enumeration value="ChocolateWithFilling"/>
+                            <xsd:enumeration value="ChocolateWithoutFilling"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="ingredients">
+                    <xsd:complexType>
+                        <xsd:all>
+                            <xsd:element name="water" type="xsd:float" minOccurs="0"/>
+                            <xsd:element name="sugar" type="xsd:float" minOccurs="0"/>
+                            <xsd:element name="fructose" type="xsd:float" minOccurs="0"/>
+                            <xsd:element name="chocolateType" type="xsd:string" minOccurs="0"/>
+                            <xsd:element name="vanillin" type="xsd:float" minOccurs="0"/>
+                        </xsd:all>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="value">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="proteins" type="xsd:float"/>
+                            <xsd:element name="fats" type="xsd:float"/>
+                            <xsd:element name="carbohydrates" type="xsd:float"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="production" type="xsd:string"/>
+            </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:ID"/>
+        </xsd:complexType>
+</xsd:schema>
+

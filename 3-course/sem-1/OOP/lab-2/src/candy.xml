@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="candies.xsd"
+>
+
+
+    <candy id='a1'>
+        <name>Example Candy</name>
+        <energy>100</energy>
+        <type>Chocolate</type>
+        <ingredients>
+            <sugar>25.0</sugar>
+            <water>0.5</water>
+            <fructose>10.0</fructose>
+            <chocolateType>Dark</chocolateType>
+            <vanillin>0.1</vanillin>
+        </ingredients>
+        <value>
+            <proteins>1.5</proteins>
+            <fats>3.0</fats>
+            <carbohydrates>20.0</carbohydrates>
+        </value>
+        <production>Example Production</production>
+    </candy>
+
+    <candy id='a2'>
+        <name>Example Candy</name>
+        <energy>100</energy>
+        <type>Caramel</type>
+        <ingredients>
+            <water>0.5</water>
+            <sugar>25.0</sugar>
+            <fructose>10.0</fructose>
+            <chocolateType>Dark</chocolateType>
+            <vanillin>0.1</vanillin>
+        </ingredients>
+        <value>
+            <proteins>1.5</proteins>
+            <fats>3.0</fats>
+            <carbohydrates>20.0</carbohydrates>
+        </value>
+        <production>Example Production</production>
+    </candy>
+    <candy id='a3'>
+        <name>Example Candy</name>
+        <energy>100</energy>
+        <type>Chocolate</type>
+        <ingredients>
+            <water>0.5</water>
+            <sugar>25.0</sugar>
+            <fructose>10.0</fructose>
+            <chocolateType>Dark</chocolateType>
+            <vanillin>0.1</vanillin>
+        </ingredients>
+        <value>
+            <proteins>1.5</proteins>
+            <fats>3.0</fats>
+            <carbohydrates>20.0</carbohydrates>
+        </value>
+        <production>Example Production</production>
+    </candy>
+</root>
+

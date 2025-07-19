@@ -1,0 +1,27 @@
+{
+  "names": [
+    "Snickers",
+    "Twix",
+    "Mars",
+    "KitKat",
+    "Milky Way",
+    "M&M's",
+    "Skittles",
+    "Hershey's",
+    "Reese's",
+    "Butterfinger",
+    "Almond Joy",
+    "Bounty",
+    "Crunch",
+    "Toblerone",
+    "Laffy Taffy"
+  ],
+  "types": [
+    "DEFAULT",
+    "CHOCOLATE",
+    "CARAMEL",
+    "GUMMY",
+    "HARD_CANDY",
+    "LOLLIPOP"
+  ]
+}

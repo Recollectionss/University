@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<candies>
+    <candy id="1">
+        <name>Chocolate Bar</name>
+        <energy>250</energy>
+        <type>Chocolate</type>
+        <ingredients>
+            <water>0.5</water>
+            <sugar>30.0</sugar>
+        </ingredients>
+        <value>
+            <proteins>2.0</proteins>
+            <fats>10.0</fats>
+            <carbohydrates>50.0</carbohydrates>
+        </value>
+    </candy>
+</candies>
